@@ -22,9 +22,9 @@ Route::group( ['middleware' => 'auth' ], function()
 {
 Route::get('/add', 'PostsController@index');
 Route::post('/add','PostsController@store');
+Route::get('/delete/{id}','PostsController@delete');
 });
 
-Route::get('/delete/{id}','PostsController@delete');
 Route::get('/products','PostsController@display');
 Route::get('/products/{id}','PostsController@detail');
 Route::post('/contact','PostsController@send');

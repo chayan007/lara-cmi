@@ -113,7 +113,6 @@ class PostsController extends Controller
     {
         $product = Product::where('id', $id)->firstOrFail();
         $product->delete();
-        $product->save();
-        return back();
+        return redirect('/products');
     }
 }
